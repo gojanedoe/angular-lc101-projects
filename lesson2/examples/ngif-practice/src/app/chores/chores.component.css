@@ -16,3 +16,12 @@ img {
     display: block;
     margin: auto;
 }
+
+.warning {
+    color: darkred;
+}
+
+#earnIceCream {
+    color: green;
+    text-align: center
+}
