@@ -22,4 +22,11 @@ export class AppComponent {
       this.message = 'Shuttle in flight.';
     }
   }
+
+  handleLand() {
+    window.alert('The shuttle is landing. Landing gear engaged.');
+    this.color = 'green';
+    this.height = 0;
+    this.message = 'The shuttle has landed.';
+  }
 }
