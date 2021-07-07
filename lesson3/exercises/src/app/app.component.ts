@@ -23,19 +23,21 @@ export class AppComponent {
     }
   }
 
-  handleLand() {
+  handleLand(rocketImage) {
     window.alert('The shuttle is landing. Landing gear engaged.');
     this.color = 'green';
     this.height = 0;
     this.message = 'The shuttle has landed.';
+    rocketImage.style.bottom = '0px';
   }
 
-  handleAbort() {
+  handleAbort(rocketImage) {
     let result = window.confirm('Are you sure you want to abort the mission?');
     if (result) {
       this.color = 'red';
       this.height = 0;
       this.message = 'Mission aborted.';
+      rocketImage.style.bottom = '0px';
     }
   }
 
