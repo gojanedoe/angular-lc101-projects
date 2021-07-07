@@ -15,13 +15,13 @@ export class AppComponent {
 
   takeOffEnabled: boolean = true;
 
-  handleTakeOff() {
+  handleTakeOff(rocketImage) {
     let result = window.confirm('Are you sure the shuttle is ready for takeoff?');
     if (result) {
       this.color = 'blue';
       this.height = 10000;
-      this.width = 0;
       this.message = 'Shuttle in flight.';
+      rocketImage.style.bottom = '10px';
 
       this.takeOffEnabled = false;
     }
@@ -42,8 +42,10 @@ export class AppComponent {
     if (result) {
       this.color = 'red';
       this.height = 0;
+      this.width = 0;
       this.message = 'Mission aborted.';
       rocketImage.style.bottom = '0px';
+      rocketImage.style.left = '0px';
 
       this.takeOffEnabled = true;
     }
