@@ -29,4 +29,13 @@ export class AppComponent {
     this.height = 0;
     this.message = 'The shuttle has landed.';
   }
+
+  handleAbort() {
+    let result = window.confirm('Are you sure you want to abort the mission?');
+    if (result) {
+      this.color = 'red';
+      this.height = 0;
+      this.message = 'Mission aborted.';
+    }
+  }
 }
