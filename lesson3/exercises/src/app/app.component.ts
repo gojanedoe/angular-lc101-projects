@@ -68,4 +68,13 @@ export class AppComponent {
       this.height = this.height - 10000;
     }
   }
+
+  detectEdge() {
+    console.log("Width: ", this.width);
+    if (this.width <= -10000 || this.width >= 470000 || this.height <= -10000 || this.height >= 330000) {
+      this.color = 'orange';
+    } else {
+      this.color = 'blue';
+    }
+  }
 }

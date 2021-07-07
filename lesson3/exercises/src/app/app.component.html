@@ -24,10 +24,10 @@
 
       <div class="col-3">
          <div class="container-right">
-            <button (click)="moveRocket(rocketImage, 'up')" [disabled]="takeOffEnabled">Up</button>
-            <button (click)="moveRocket(rocketImage, 'down')" [disabled]="takeOffEnabled">Down</button>
-            <button (click)="moveRocket(rocketImage, 'right')" [disabled]="takeOffEnabled">Right</button>
-            <button (click)="moveRocket(rocketImage, 'left')" [disabled]="takeOffEnabled">Left</button>
+            <button (click)="moveRocket(rocketImage, 'up'); detectEdge()" [disabled]="takeOffEnabled">Up</button>
+            <button (click)="moveRocket(rocketImage, 'down'); detectEdge()" [disabled]="takeOffEnabled">Down</button>
+            <button (click)="moveRocket(rocketImage, 'right'); detectEdge()" [disabled]="takeOffEnabled">Right</button>
+            <button (click)="moveRocket(rocketImage, 'left'); detectEdge()" [disabled]="takeOffEnabled">Left</button>
             <h3>Space Shuttle Height</h3>
             <p>{{height}} km</p>
          </div>
